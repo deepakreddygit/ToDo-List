@@ -1,0 +1,81 @@
+
+
+
+
+
+
+
+
+
+body {
+
+   
+    background-color: palevioletred;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+
+}
+
+.container {
+   
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .card {
+    background: white;
+    width: 250px;
+    height: 40vh;
+    border-radius: 5px;
+    box-shadow: 4px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+}
+
+.container .card .circle {
+    height: 100px;
+    width: 100px;
+    border: 8px solid #fa4299;
+    border-radius: 50%;
+    position: relative;
+   
+  
+}
+
+.card .circle .box {
+    height: 100%;
+    
+    width: 100%;
+    border-radius: 50%;
+   
+    
+    
+  
+}
+
+.card .circle .box span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: x-large;
+    font-weight: bold;
+    color:  palevioletred;
+}
+
+.card .text {
+    font-size: 20px;
+    color: palevioletred;
+}
+
+.card .circle:hover .box span{
+    transform: translate(-50%,-50%) scale(1.07);
+}

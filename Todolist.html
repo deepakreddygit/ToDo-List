@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+
+<link rel="stylesheet" href="list.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>$(document).ready(function(){
+    $("input").on("keyup",function(e){
+        if(e.keyCode==13 && $("input").val()!=""){
+        var x = $("<div class='task'></div>").text($("input").val());
+        $(".notcomp").append(x);
+        $("input").val("");
+    }
+    var del = $("<i class='fas fa-trash-alt'></i>");
+    var check = $("<i class='fas fa-check'></i>");
+    x.append(del,check);
+    del.click(function(){
+
+        var p = $(this).parent();
+        p.remove();
+        
+
+    });
+    check.click(function(){
+        var q = $(this).parent();
+        $(this).remove();
+   q.hide(function(){
+    $(".comp").append(q);
+    q.show();
+   
+   });
+  
+
+
+
+    });
+   
+    
+    });
+});
+</script>
+</head>
+<body>
+  <div class="container">
+      <div class="inputtext">
+          <p id="a2"></p>
+    <input  type="text"  class="textb" placeholder="Type" >
+</div>
+
+<div class="notcomp">
+   
+        <p> Tasks Not Completed</p>
+</div>      
+        
+             
+
+    
+    
+       
+        <div class="comp">
+            <p> Completed Tasks</p>
+           
+        </div>
+    </div>  
+    
+
+    
+          
+        
+
+
+    </div>
+
+
+   
+</body>
+</html>
